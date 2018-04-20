@@ -8,14 +8,7 @@ export class LoginServices {
   constructor() { }
 
 loginUser(user:string,pass:string){
-    if(user=='jairo' && pass =='jairo123'){
-        console.log(`user:${user} pass:${pass}`);
-        return true;
-    }else{
-        return false;
-       
-    }
-    
-    
+   return user ==='jairo' && pass === 'jairo123';
+     
 }
 }

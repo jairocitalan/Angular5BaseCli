@@ -16,12 +16,10 @@ export class LoginComponent implements OnInit ,OnDestroy{
     }
 
     logeo(){
-     if(this._login.loginUser(this.user,this.pass)){
-        this.router.navigate(['']);
-     }
-     else{
-         alert('Error en usuario o contraseña');
-     }
+     this._login.loginUser(this.user,this.pass) ?
+      this.router.navigate(['']) : 
+      alert('Error en usuario o contraseña');
+      
     }
     
     ngOnInit() {
