@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitHubService } from '../services/git-hut.service';
+import { GitHubModel } from '../model/git-hub-model';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  gitHubData: GitHubModel;
+  gitHubDataList: Array<GitHubModel>;
+  constructor(private _gitHubServices: GitHubService) {
+     
+      this.gitHubDataList=new Array<GitHubModel>();  
+   }
 
-  constructor() { }
+  
 
-  ngOnInit() {
+  ngOnInit() {   
+   
+
+
+  }
+
+  onSearchUser(userName: string){
+    this._gitHubServices.getUserInfo(userName).subscribe(x => {
+     this.gitHubDataList.push(x);
+    });
+  }
+  onDelete(obj: GitHubModel){
+    console.log(obj);
+    this.gitHubDataList=this.gitHubDataList.filter(x => x != obj);
+    
   }
 
 }

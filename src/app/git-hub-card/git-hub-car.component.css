@@ -1,11 +1,13 @@
 .horizontal-container{
     display: flex;
     flex-direction: row;
+    
 }
 
 .card{
     border: 1px solid royalblue;
     width: 350px;
+   
 }
 
 .data-container{
