@@ -1,7 +1,13 @@
 <div><br>
     <div class="login">
-    Users: <input type="text"  [(ngModel)]="user" /><br>
-    Password:<input type="password"  [(ngModel)]="pass" />
-    <button (click)="logeo()">Log me</button>
+
+    UsersName: <input type="text" id="user"  [(ngModel)]="user" /><br>
+    Password:<input type="password"  [(ngModel)]="pass" /><br>
+    Confirmar Password: <input type="password"  [(ngModel)]="passConf" /><br>
+    Correo:<input type="mail" [(ngModel)]="mail" /><br>
+    Nombre:<input type="text" [(ngModel)]="nombre" /><br>
+    <input type="checkbox" id="check" [(ngModel)]="condiciones" ng-true-value="'YES'" ng-false-value="'NO'">Acepta<br>
+    
+    <button id="boton" (click)="logeo()">Registrar</button>
     </div>
 </div>

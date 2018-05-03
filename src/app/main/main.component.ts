@@ -8,10 +8,6 @@ import { GitHubModel } from '../model/git-hub-model';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-<<<<<<< HEAD
-
-=======
->>>>>>> feature/FeatureMateriaSelect
   foods = [
     {value: 'steak-0', viewValue: 'Steak'},
     {value: 'pizza-1', viewValue: 'Pizza'},

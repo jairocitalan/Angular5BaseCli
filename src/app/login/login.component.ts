@@ -9,14 +9,20 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit ,OnDestroy{
    // router: any;
-    private user: string;
-    private pass:string;
-    constructor(private _login: LoginServices,private router:Router){
+    public user: string;
+    public pass:string;
+    public passConf:string;
+    public mail:string;
+    public nombre:string;
+    public condiciones:boolean; 
+    
+
+    constructor(private _login: LoginServices,public router:Router){
        
     }
 
-    logeo(){
-     this._login.loginUser(this.user,this.pass) ?
+     logeo(){
+     this._login.loginUser(this.user,this.pass,this.passConf,this.mail,this.nombre,this.condiciones)  ?
       this.router.navigate(['']) : 
       alert('Error en usuario o contraseña');
       

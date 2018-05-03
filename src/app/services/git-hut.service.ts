@@ -4,7 +4,7 @@ import { Observable } from "rxjs/Rx";
 import { GitHubModel } from "../model/git-hub-model";
 
 //const _getUserUrl='https://api.github.com/users';
-const _getUserUrl='http://10.11.1.100:8080/users';
+const _getUserUrl='http://localhost:7001/scheduler-web/resources/catalog/usersGit';
 
 @Injectable()
 export class GitHubService{
